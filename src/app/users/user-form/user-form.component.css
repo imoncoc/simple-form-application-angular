@@ -25,3 +25,8 @@
   border-color: #0070f3;
   outline: none;
 }
+
+.alert {
+  color: red;
+  font-size: 14px;
+}
