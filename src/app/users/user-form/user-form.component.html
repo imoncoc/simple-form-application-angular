@@ -1,0 +1,55 @@
+<div class="user-form-container">
+  <p class="user-form-title">User Form (TDF)</p>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="inputContainer">
+      <label for="name">Name: </label>
+      <input
+        class="inputField"
+        type="text"
+        name="name"
+        id="name"
+        ngModel
+        required
+      />
+    </div>
+    <div class="inputContainer">
+      <label for="email">Email: </label>
+      <input
+        class="inputField"
+        type="email"
+        name="email"
+        id="email"
+        ngModel
+        required
+      />
+    </div>
+    <div class="inputContainer">
+      <label for="phone">Phone: </label>
+      <input
+        class="inputField"
+        type="number"
+        name="phone"
+        id="phone"
+        ngModel
+        required
+      />
+    </div>
+    <div class="inputContainer">
+      <label for="Address">Address: </label>
+      <textarea
+        class="inputField"
+        type="text"
+        name="address"
+        id="address"
+        ngModel
+        required
+      ></textarea>
+    </div>
+
+    <div style="display: flex; justify-content: end">
+      <button class="primary-button" type="submit" [disabled]="!form.valid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
